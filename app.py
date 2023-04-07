@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -13,4 +14,4 @@ def create_order():
     return jsonify({'msg' : 'Order Created Sucessfully'})
 
 if __name__ == "main":
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT",5000)))
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT",8080)))
